@@ -9,13 +9,18 @@ Basic Requirements
 
 UI -
 Book image with text & options appearing, 
-Music,
-Art,
+
+Music
+
+Art
+
 Menu -
 Simple game menu, 
+
 Content -
 text entries, outcomes, options,
 multiple endings, no right answer,
+
 Engine -
 main functions,
 display text,
@@ -23,9 +28,11 @@ navigate contents,
 Easy upload of contents,
 Easily Expandable,
 Multiple endings,
+
 Save System/Password -
 allow for multiple play states but useable from a web based playthorugh,
-Credits screen,
+
+Credits screen
 
 Stretch Goal Ideas: DO NOT ATTEMPT UNTIL ABOVE LIST IS COMPLETE - CART BEFORE THE HORSE,
 UI beyond the book (maybe a rooom),
