@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class buttonscript : MonoBehaviour
 {
-    public OptionClass Option;
-    public string Button;
+    OptionClass Option;
+    string Button;
+    public Text ButtonWord;
 
     public void PRESS()
     {
@@ -17,5 +19,13 @@ public class buttonscript : MonoBehaviour
         {
             EngineScript.engineScript.Setup(Button);
         }
+    }
+
+    public void setup(OptionClass OC)
+    {
+        Option = OC;
+        Button = OC.Option;
+        ButtonWord.text = OC.Title;
+
     }
 }

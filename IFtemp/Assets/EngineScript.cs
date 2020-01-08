@@ -8,7 +8,9 @@ public class EngineScript : MonoBehaviour
     private void Awake()
     {
         engineScript = this;
+
     }
+    
     public List<PageClass> Pages;
 
     public void Setup(string S)

@@ -13,7 +13,7 @@ public class typescript : MonoBehaviour
     public bool updating;
     string Choppedtext;
     public string Outputtext;
-  
+    public GameObject Optionprefab;
     public void Load(PageClass P)
     {
       
@@ -36,6 +36,13 @@ public class typescript : MonoBehaviour
         Basetext = P.Title;
         Choppedtext = Basetext;
         Outputtext = "";
+        UIManager.uiManager.DialogueTitle.text = Outputtext;
+        UIManager.uiManager.Dialoguebox.text = Outputtext;
+        UIManager.uiManager.Action.text = Outputtext;
+        foreach (Transform item in UIManager.uiManager.OptionHolder)
+        {
+            Destroy(item.gameObject);
+        }
         while (Choppedtext.Length > 0)
         {
             Outputtext += NextChar();
@@ -50,6 +57,14 @@ public class typescript : MonoBehaviour
             Outputtext += NextChar();
             UIManager.uiManager.Dialoguebox.text = Outputtext;
             yield return new WaitForSeconds(0.03f);
+        }
+        for (int i = 0; i < P.Options.Count; i++)
+        {
+            GameObject Button = Instantiate(Optionprefab);
+            buttonscript OC = Button.GetComponent<buttonscript>();
+            OC.setup(P.Options[i]);
+            Button.transform.SetParent(UIManager.uiManager.OptionHolder);
+            yield return new WaitForSeconds(1);
         }
         Basetext = P.Action;
         Choppedtext = Basetext;
