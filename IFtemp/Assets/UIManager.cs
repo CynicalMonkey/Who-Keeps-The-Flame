@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         uiManager = this;
+
     }
     public Text Dialoguebox;
     public Text DialogueTitle;
@@ -16,16 +17,61 @@ public class UIManager : MonoBehaviour
     public Transform OptionHolder;
     public Transform Menu;
     public Transform Gamescreen;
+    public Transform Intro;
+    public Transform Ending;
+    public Text Introsig;
+    public Text Introtext;
+    public Text Endingtext;
+    public Text EndingSig;
 
-    public void Menuload()
+    void Wipe()
     {
         Gamescreen.gameObject.SetActive(false);
-        Menu.gameObject.SetActive(true);
+        Intro.gameObject.SetActive(false);
+        Menu.gameObject.SetActive(false);
+        Ending.gameObject.SetActive(false);
+
+
+    }
+    public void Menuload()
+    {
+        Wipe();
+        Fadescript.Fref.LoadRule("Menu");
     }
     public void Gameload()
     {
-        Menu.gameObject.SetActive(false);
-        Gamescreen.gameObject.SetActive(true);
-        EngineScript.engineScript.Setup("Menu");
+        Wipe();
+        Fadescript.Fref.LoadRule("Intro");
+       
+    }
+
+    public void Bookload()
+    {
+        if (typescript.Typescript.updating) { }
+        else
+        {
+            Wipe();
+            Fadescript.Fref.LoadRule("Game");
+
+        }
+    }
+    public void Fadein(string S)
+    {
+        switch (S)
+        {
+            case "Menu":
+                Menu.gameObject.SetActive(true);
+
+                break;
+            case "Intro":
+                Intro.gameObject.SetActive(true);
+                typescript.Typescript.Intro();
+                break;
+            case "Game":
+            
+                Gamescreen.gameObject.SetActive(true);
+                EngineScript.engineScript.Setup("Menu");
+                break;
+        }
     }
 }

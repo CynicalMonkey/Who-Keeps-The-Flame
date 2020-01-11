@@ -31,6 +31,10 @@ public class typescript : MonoBehaviour
       
         return N;
     }
+    public void Intro()
+    {
+        StartCoroutine(Typeintro());
+    }
     IEnumerator Typepage(PageClass P)
     {
         Basetext = P.Title;
@@ -45,9 +49,11 @@ public class typescript : MonoBehaviour
         }
         while (Choppedtext.Length > 0)
         {
-            Outputtext += NextChar();
-            UIManager.uiManager.DialogueTitle.text = Outputtext;
-            yield return new WaitForSeconds(0.06f);
+            
+                Outputtext += NextChar();
+                UIManager.uiManager.DialogueTitle.text = Outputtext;
+                yield return new WaitForSeconds(0.06f);
+         
         }
         Basetext = P.Textpage;
         Choppedtext = Basetext;
@@ -77,5 +83,33 @@ public class typescript : MonoBehaviour
         }
         updating = false;
     }
-  
+    public IEnumerator Typeintro()
+    {
+        updating = true;
+        string sigtext = UIManager.uiManager.Introsig.text;
+        UIManager.uiManager.Introsig.text="";
+        Basetext = UIManager.uiManager.Introtext.text;
+        Choppedtext = Basetext;
+        Outputtext = "";
+        UIManager.uiManager.Introtext.text = Outputtext;
+        while (Choppedtext.Length > 0)
+        {
+           
+                Outputtext += NextChar();
+                UIManager.uiManager.Introtext.text = Outputtext;
+                yield return new WaitForSeconds(0.02f);
+            
+        }
+        Basetext = sigtext;
+        Choppedtext = Basetext;
+        Outputtext = "";
+       
+        while (Choppedtext.Length > 0)
+        {
+            Outputtext += NextChar();
+            UIManager.uiManager.Introsig.text = Outputtext;
+            yield return new WaitForSeconds(0.05f);
+        }
+        updating = false;
+    }
 }

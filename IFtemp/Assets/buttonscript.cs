@@ -28,4 +28,5 @@ public class buttonscript : MonoBehaviour
         ButtonWord.text = OC.Title;
 
     }
+   
 }
