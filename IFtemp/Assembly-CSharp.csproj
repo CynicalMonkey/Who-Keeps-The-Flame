@@ -65,6 +65,7 @@
     <Compile Include="Assets\buttonscript.cs" />
     <Compile Include="Assets\EngineScript.cs" />
     <Compile Include="Assets\Fadescript.cs" />
+    <Compile Include="Assets\Importer.cs" />
     <Compile Include="Assets\OptionClass.cs" />
     <Compile Include="Assets\PageClass.cs" />
     <Compile Include="Assets\typescript.cs" />

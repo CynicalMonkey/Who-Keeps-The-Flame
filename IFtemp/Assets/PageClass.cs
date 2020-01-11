@@ -6,13 +6,17 @@ using UnityEngine;
 public class PageClass 
 {
     public string UniqueID;
-    public string Textpage;
-    public string Title;
-    public string Action;
-    public List<OptionClass> Options;
+    public string ContentTitle;
+    public string OptionTitle;
+    public string Content;
+    public string Condition;
+    public string[] Action = new string[2];
+    public string CallToAction;
+    public List<string> Options;
     
     public PageClass()
     {
 
     }
+  
 }

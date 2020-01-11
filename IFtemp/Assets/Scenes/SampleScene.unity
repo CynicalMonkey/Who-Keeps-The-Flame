@@ -742,34 +742,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80393fb0757ca944597e70808e75a68c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Archive:
+  - 
+  - 
+  - 
+  - 
+  - 
   Pages:
   - UniqueID: Menu
-    Textpage: This is the menu, it will be used to guide you on this long and arduos
-      adventure through the book. choose wisely and be rewarded, choose foolishly
-      and be lost in words forever
-    Title: The Menu Page
-    Action: Choose Wisely
+    ContentTitle: 'The Menu. The Menu. The Menu. The Menu. The Menu. '
+    OptionTitle: Return To Menu
+    Content: 'This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01
+      a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 10 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      20 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 30 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      40 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 50 a thing ok. '
+    Condition: None
+    Action: []
+    CallToAction: Choose Well
     Options:
-    - Title: Wise Choice
-      Option: Wise
-    - Title: Foolish Choice
-      Option: Foolish
+    - Wise
+    - Foolish
   - UniqueID: Wise
-    Textpage: You chosde wisely well done you wise things will happen from hear on
-      out oh you bet its all so wise, you'll see. wise wise wise
-    Title: The Wise Choice
-    Action: Try again?
+    ContentTitle: The Wise Choice
+    OptionTitle: 'Choose Wisely. Choose Wisely. Choose Wisely. Choose Wisely. '
+    Content: 'This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01
+      a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 10 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      20 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 30 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      40 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 50 a thing ok. '
+    Condition: None
+    Action: []
+    CallToAction: Where Now?
     Options:
-    - Title: Back to Menu
-      Option: Menu
+    - Foolish
+    - Menu
   - UniqueID: Foolish
-    Textpage: Oh boy was that foolish, I can't believe you chose that, just wait there
-      and i will find the words to bury you in
-    Title: The Foolish Choice
-    Action: Escape while you can
+    ContentTitle: The Foolish Choice
+    OptionTitle: Choose Foolishly
+    Content: 'This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01
+      a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 10 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      20 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 30 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      40 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 01 a thing ok. This 01 a thing ok. This
+      01 a thing ok. This 01 a thing ok. This 50 a thing ok. '
+    Condition: None
+    Action: []
+    CallToAction: Where Now?
     Options:
-    - Title: Run away
-      Option: Menu
+    - Foolish
+    - Menu
 --- !u!114 &188612356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,6 +831,7 @@ MonoBehaviour:
   Outputtext: 
   Optionprefab: {fileID: 8804042470405416343, guid: 37a9df3ec9e498b4b962fe63039962b0,
     type: 3}
+  writespeed: 0.1
 --- !u!4 &188612357
 Transform:
   m_ObjectHideFlags: 0

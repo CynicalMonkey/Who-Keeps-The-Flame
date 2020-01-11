@@ -18,6 +18,10 @@ public class buttonscript : MonoBehaviour
         else
         {
             EngineScript.engineScript.Setup(Button);
+            if (Option.Action.Length >0)
+            {
+                EngineScript.engineScript.Activate(Option.Action);
+            }
         }
     }
 

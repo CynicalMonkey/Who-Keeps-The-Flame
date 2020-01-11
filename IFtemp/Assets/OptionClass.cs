@@ -7,8 +7,13 @@ public class OptionClass
 {
     public string Title;
     public string Option;
-    public OptionClass()
+    public string Condition;
+    public string[] Action = new string[2];
+    public OptionClass(PageClass P)
     {
-
+        Title = P.OptionTitle;
+        Option = P.UniqueID;
+        Condition = P.Condition;
+        Action = P.Action;
     }
 }
